@@ -121,7 +121,6 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Eleven \
     LockClock \
-    CMUpdater \
     CyanogenSetupWizard \
     CMSettingsProvider \
     ExactCalculator \
@@ -196,6 +195,13 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# Essential OTA Config
+PRODUCT_PACKAGES += \
+    RolexOTA
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.build.date=$(shell date +%Y%m%d)
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
